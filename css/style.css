@@ -639,10 +639,7 @@ footer {
 .footer-link .item:not(:last-child) {
   margin-right: 10px;
 }
-.link-item .social:hover,
-.link-item .social:focus {
-  fill: var(--second-accent-color);
-}
+
 .link-item:hover,
 .link-item:focus {
   background-color: var(--accent-color);
