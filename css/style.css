@@ -126,6 +126,7 @@ img {
 }
 .auth-nav .link {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 14px;
   line-height: 1.14;
@@ -144,21 +145,15 @@ img {
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  fill: #757575;
+  fill: currentColor;
 }
-.icon-envelope:hover {
-  fill: var(--accent-color);
-}
+
 .icon-smartphone {
   display: inline-block;
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: #757575;
-}
-.icon-smartphone:hover,
-.icon-smartphone:focus {
-  fill: var(--accent-color);
+  fill: currentColor;
 }
 
 /* Hero*/
@@ -341,32 +336,34 @@ img {
 .social-link {
   display: flex;
 }
+
 .social-link .link {
   display: block;
-  align-content: center;
   border-radius: 50%;
   width: 44px;
   height: 44px;
   padding: 12px;
+  color: var(--icon-color);
 }
 
 .social {
   display: block;
   justify-content: center;
-  fill: var(--icon-color);
+  align-items: center;
+  fill: currentColor;
   width: 20px;
   height: 20px;
 }
-.social-link .link:not(:last-child) {
+.social-link .item-link:not(:last-child) {
   margin-right: 10px;
 }
-.social:hover,
-.social:focus {
-  fill: var(--second-accent-color);
+.social-link .item {
+  margin-left: 0;
 }
 .social-link .link:hover,
 .social-link .link:focus {
   background-color: var(--accent-color);
+  color: var(--second-accent-color);
 }
 .border-team {
   border-left: var(--border-color);
@@ -389,7 +386,10 @@ img {
   display: flex;
 }
 .client-item {
-  display: flex;
+}
+.client-link {
+  display: block;
+  margin: 0;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 32px;
@@ -398,28 +398,23 @@ img {
   height: 92px;
   left: 1015px;
   top: 2493px;
+  text-decoration: none;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-}
-.client-link {
-  margin: 0;
-  padding: 0;
+  color: var(--icon-color);
 }
 .icon-company {
   width: 106px;
   height: 60px;
-  fill: var(--icon-color);
+  fill: currentColor;
 }
 .client-item:not(:last-child) {
   margin-right: 30px;
 }
-.client-item:hover,
-.client-item:focus {
+.client-link:hover,
+.client-link:focus {
   border: 1px solid var(--accent-color);
-}
-.client-item .icon-company:hover,
-.client-item .icon-company:focus {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /*Портфоліо*/
@@ -614,7 +609,8 @@ footer {
   height: 44px;
   align-content: center;
   border-radius: 50%;
-  background-color: var(--title-text-color);
+  color: var(--second-accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
 
   padding: 12px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -635,10 +631,10 @@ footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: #ffffff;
+  color: var(--second-accent-color);
 }
 .social-footer {
-  fill: var(--second-accent-color);
+  fill: currentColor;
 }
 .footer-link .item:not(:last-child) {
   margin-right: 10px;
